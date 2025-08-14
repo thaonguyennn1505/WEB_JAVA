@@ -79,7 +79,7 @@ public class CategoryDAO extends AbstractDAO<Category> {
 		return null;
 	}
 
-	// search
+	// tìm kiếm
 	public List<Category> search(String catName, int offset, int rowCount, int deleteStatus) {
 		String sql = "SELECT * FROM product_cat WHERE catName LIKE ? AND deleteStatus = ? ORDER BY catId DESC LIMIT ?,?";
 		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Category.class), "%" + catName + "%", offset,
