@@ -51,3 +51,4 @@ public class ContactDAO extends AbstractDAO<Contact> {
 	}
 
 }
+// very good
